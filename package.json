@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "array-methods":"nodemon ./js/09-array-methods.js",
+    "objects":"nodemon ./js/08-objects.js",
+    "typeof":"nodemon ./js/07-typeof.js",
     "array": "nodemon ./js/05-array.js",
     "function": "nodemon ./js/04-function.js",
     "string": "nodemon ./js/03-string.js",
