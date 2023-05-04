@@ -104,3 +104,49 @@ if(savaitesDiena === undefined) {
 } else {
     console.log(savaitesDiena);
 }
+
+if (777 === 777) {
+    console.log('nelygu');
+} else {
+    console.log('lygu');
+}
+
+if (777 !== 777) {
+    console.log('nelygu');
+} else {
+    console.log('lygu');
+}
+
+
+if ('labas' == 888) {
+    console.log('nelygu');
+} else {
+    console.log('lygu');
+}
+
+
+if ( 4 > 2 && 8 < 20) {
+    console.log('>>> and');
+};
+
+
+if ( 1 === 1 && 2 === 3 || 4 === 4) {
+    console.log('mix');
+}
+
+
+const a = true; 
+
+if ( !a) {
+    console.log('taip')
+} else {
+    console.log('ir ne');
+}
+
+if (2) {
+    console.log('kazkas...');
+} else {
+    console.log('ne kazka...');
+}
+
+
