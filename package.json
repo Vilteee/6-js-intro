@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "if":"nodemon ./js/10-if.js",
+    "uzd":"nodemon ./js/00-uzd.js",
     "array-methods":"nodemon ./js/09-array-methods.js",
     "objects":"nodemon ./js/08-objects.js",
     "typeof":"nodemon ./js/07-typeof.js",
