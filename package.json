@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "boolean":"nodemon ./js/06-boolean.js",
     "ternary":"nodemon ./js/11-ternary.js",
     "if":"nodemon ./js/10-if.js",
     "uzd":"nodemon ./js/00-uzd.js",

@@ -73,10 +73,27 @@ console.log(joinOfWords(fruits));
 function plusMinusLogic (number) {
     let value = 0;
 
-  
+    value += number[0];
+    value -= number[1];
+    value += number[2];
+    value -= number[3];
+    value += number[4];
 
-    return  `${number[0]} - ${number[1]} + ${number[2]} - ${number[3]} + ${number[4]}`;
+    return value;
 
 }
 
-console.log(plusMinusLogic(playersNumbers));                                                                                                                                                                 
+console.log(plusMinusLogic(playersNumbers));  
+
+// Sujungti sąrašų vertes, kurių tipas yra tekstai, nuo sąrašo galo iki pradžios taip, jog tarp jų būtų kablelis ir tarpas
+
+
+function joinFromEndToBeginning (text) {
+
+    return `${text[4]}, ${text[3]}, ${text[2]}, ${text[1]}, ${text[0]}`;
+
+}
+
+console.log(joinFromEndToBeginning(fruits));
+
+
