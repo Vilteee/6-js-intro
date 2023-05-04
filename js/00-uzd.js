@@ -97,3 +97,125 @@ function joinFromEndToBeginning (text) {
 console.log(joinFromEndToBeginning(fruits));
 
 
+// Kintamųjų palyginimas
+// Lyginant, jei rezultatas tenkina palyginimo sąlygą, tai į console išvesti žodį “Pomidoras”, o jei sąlyga nėra tenkinama, išvesti sakinį “Bandykite kitą kartą.”.
+
+// Tarpusavyje palyginti skaičiaus tipo kintamuosius:
+// kuris didesnis
+// kuris mažesnis
+// ar jie lygūs
+// ar jie nelygūs
+// kuris didesnis arba lygus
+// kuris mažesnis arba lygus
+
+// Išvesti teksto tipo kintamųjų ilgius
+
+// Tarpusavyje palyginti teksto tipo kintamųjų ilgius:
+// kuris didesnis
+// kuris mažesnis
+// ar jie lygūs
+// ar jie nelygūs
+// kuris didesnis arba lygus
+// kuris mažesnis arba lygus
+
+// Išvesti sąrašo tipo kintamųjų ilgius
+
+// Tarpusavyje palyginti sąrašo tipo kintamųjų ilgius:
+// kuris didesnis
+// kuris mažesnis
+// ar jie lygūs
+// ar jie nelygūs
+// kuris didesnis arba lygus
+// kuris mažesnis arba lygus
+
+
+let number11 = 11;
+let number12 = 12;
+
+if (number11 > number12) {
+    console.log('Pomidoras');
+
+} else  {
+    console.log('Bandykite dar kartą')
+}
+
+if (number11 < number12) {
+    console.log('Pomidoras');
+
+} else  {
+    console.log('Bandykite dar kartą')
+}
+
+if (number11 === number12) {
+    console.log('Pomidoras');
+
+} else  {
+    console.log('Bandykite dar kartą')
+}
+
+if (number11 !== number12) {
+    console.log('Pomidoras');
+
+} else  {
+    console.log('Bandykite dar kartą')
+}
+
+let someText1 = "kazkoksTekstas";
+
+let someText2 = "kazkoksTekstasDu";
+
+console.log(someText1.length);
+console.log(someText2.length);
+
+ let text1Length = someText1.length;
+ let text2Length = someText2.length;
+
+if (text1Length > text2Length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą');
+}
+
+if (text1Length < text2Length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą');
+}
+
+
+if (text1Length === text2Length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą');
+}
+
+
+if (text1Length !== text2Length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą');
+}
+
+
+if (text1Length >= text2Length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą');
+}
+
+if (text1Length <= text2Length) {
+    console.log('Pomidoras');
+} else {
+    console.log('Bandykite dar kartą');
+}
+
+const hardFeelings = ['guilty', 'anxious', 'confused', 'sad', 'disappointed' ];
+
+const feeling1 = hardFeelings[0].length;
+const feeling2 = hardFeelings[1].length;
+const feeling3 = hardFeelings[2].length;
+const feeling4 = hardFeelings[3].length;
+const feeling5 = hardFeelings[4].length;
+
+console.log(feeling1, feeling2, feeling3, feeling4, feeling5);
+
