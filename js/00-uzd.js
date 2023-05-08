@@ -210,6 +210,12 @@ if (text1Length <= text2Length) {
 }
 
 const hardFeelings = ['guilty', 'anxious', 'confused', 'sad', 'disappointed' ];
+const positiveFeelings = ['joy', 'love', 'satisfaction', 'interest'];
+
+const feelingsHard = hardFeelings.length;
+const feelingsPositive = positiveFeelings.length;
+
+console.log(feelingsHard, feelingsPositive);
 
 const feeling1 = hardFeelings[0].length;
 const feeling2 = hardFeelings[1].length;
@@ -219,3 +225,134 @@ const feeling5 = hardFeelings[4].length;
 
 console.log(feeling1, feeling2, feeling3, feeling4, feeling5);
 
+if (feelingsHard > feelingsPositive) {
+    console.log("pomidoras");
+} else {
+    console.log('Bandykite dar kartą');
+}
+
+
+//IR T.T..........
+
+// Funkcijos
+
+// Parašyti funkcijas, kurios atitinka pateiktus reikalavimus, jei įvykdo reikiamus testus
+
+// Funkcija pavadinimu “tusciaFunkcija”:
+// nepriima jokių kintamųjų
+// neatlieka jokios vidinės logikos
+// gražina boolean tipo reikšmę “false”
+// TESTAS:
+// console.log( tusciaFunkcija() );
+// rezultatas: false
+
+
+function tusciaFunkcija () {
+
+    return false;
+}
+
+console.log(tusciaFunkcija());
+
+
+// Funkcija pavadinimu “daugyba”:
+// priima du skaičiaus tipo kintamuosius
+// atskirame kintamajame įsimena sandaugos reikšmę
+// gražina saudaugos rezultatą
+// TESTAI:
+// console.log( daugyba( skaicius1, skaicius2 ) );
+// console.log( daugyba( skaicius3, skaicius2 ) );
+// console.log( daugyba( skaicius1, skaicius3 ) );
+// rezultatas: teisingos reikšmės;
+
+
+function multiplication (skaicius1, skaicius2) {
+
+     let result1 = skaicius1 * skaicius2;
+     return result1;
+
+}
+
+console.log(multiplication(3,7,5));
+
+// Funkcija pavadinimu “skaitmenuKiekisSkaiciuje”:
+// priima vieną kintamąjį
+// jei perduotas kintamasis nėra skaičiaus tipo, tai išveda pranešimą “Pateikta netinkamo tipo reikšmė.”
+// priešingu atveju, funkcija tęsia darbą
+// į atskirą kintamąjį įsimena skaičių sudarančių skaitmenų kiekį
+// gražina skaitmenų kiekį
+// TESTAI:
+// console.log( skaitmenuKiekisSkaiciuje( 5 ) );
+// rezultatas: 1
+// console.log( skaitmenuKiekisSkaiciuje( 781 ) );
+// rezultatas: 3
+// console.log( skaitmenuKiekisSkaiciuje( 37060123456 ) );
+// rezultatas: 11
+// console.log( skaitmenuKiekisSkaiciuje( true ) );
+// rezultatas: “Pateikta netinkamo tipo reikšmė.”
+// console.log( skaitmenuKiekisSkaiciuje( “asd” ) );
+// rezultatas: “Pateikta netinkamo tipo reikšmė.”
+// console.log( skaitmenuKiekisSkaiciuje( NaN ) );
+// rezultatas: “Pateikta netinkamo tipo reikšmė.”
+
+
+function skaitmenuKiekisSkaiciuje(number) {
+    let typeOfNumber = typeof number;
+    // console.log(typeOfNumber);
+    
+    if (typeOfNumber !== 'number' ) {
+        return "Pateikta netinkamo tipo reikšmė";
+    } else {
+        let skaitmenuKiekisSkaiciuje = String(number).length;
+        return skaitmenuKiekisSkaiciuje;
+        
+    }
+    
+    
+}
+console.log("hfkwjs-----------");
+
+console.log(skaitmenuKiekisSkaiciuje(5));
+console.log(skaitmenuKiekisSkaiciuje(781));
+console.log(skaitmenuKiekisSkaiciuje(37060123456));
+console.log(skaitmenuKiekisSkaiciuje(true));
+console.log(skaitmenuKiekisSkaiciuje('asd'));
+console.log(skaitmenuKiekisSkaiciuje(NaN));
+
+
+// Funkcija pavadinimu “didziausiasSkaiciusSarase”:
+// priima vieną kintamąjį
+// jei perduotas kintamasis nėra sąrašo tipo, tai išveda pranešimą “Pateikta netinkamo tipo reikšmė.”
+// jei sąrašas yra tuščias, tai išveda pranešimą “Pateiktas sąrašas negali būti tuščias.”
+// priešingu atveju, funkcija tęsia darbą
+// pereina per visą pateiktą sąrašą ir į atskirą kintamąjį įsimena skaičių, kuris tuo metu yra didžiausias
+// gražina didžiausią surastą skaičių
+// TESTAI:
+// console.log( didziausiasSkaiciusSarase( [ 1 ] ) );
+// rezultatas: 1
+// console.log( didziausiasSkaiciusSarase( [ 1, 2, 3 ] ) );
+// rezultatas: 3
+// console.log( didziausiasSkaiciusSarase( [ -5, 78, 14, 0, 18 ] ) );
+// rezultatas: 78
+// console.log( didziausiasSkaiciusSarase( [ 69, 69, 69, 69, 66 ] ) );
+// rezultatas: 69
+// console.log( didziausiasSkaiciusSarase( [ -1, -2, -3, -4, -5, -6, -7, -8 ] ) );
+// rezultatas: -1
+// console.log( didziausiasSkaiciusSarase( “pomidoras” ) );
+// rezultatas: “Pateikta netinkamo tipo reikšmė.”
+// console.log( didziausiasSkaiciusSarase( [] ) );
+// rezultatas: “Pateiktas sąrašas negali būti tuščias.”
+
+
+const list1 = [1, 3, 4, 7, 8, ];
+const list2 = [10, 17, 38, 35, 95];
+const list3 = [100, 485, 223, 694, 953];
+
+
+function didziausiasSkaiciusSarase () {
+
+
+
+}
+
+console.log(didziausiasSkaiciusSarase[1]);
