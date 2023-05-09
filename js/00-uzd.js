@@ -253,6 +253,9 @@ function tusciaFunkcija () {
 }
 
 console.log(tusciaFunkcija());
+console.log(tusciaFunkcija(1));
+console.log(tusciaFunkcija('asdas'));
+console.log(tusciaFunkcija(true));
 
 
 // Funkcija pavadinimu “daugyba”:
@@ -275,6 +278,70 @@ function multiplication (skaicius1, skaicius2) {
 
 console.log(multiplication(3,7,5));
 
+
+console.clear();
+
+function multiply(a, b) {
+    if (typeof a !== 'number') {
+        return 'ERROR: pirmas parametras ne skaicius';
+    }
+    if (!isFinite(a)) {
+        return 'ERROR: pirmas parametras turi buti tikras skaicius';
+    }
+
+    if (typeof b !== 'number') {
+        return 'ERROR: antras parametras ne skaicius';
+    }
+    if (Math.abs(b) === Infinity) {
+        return 'ERROR: antras parametras negali buti Infinity';
+    }
+    if ('' + b === 'NaN') {
+        return 'ERROR: antras parametras negali buti NaN';
+    }
+
+    const result = a * b;
+    return result;
+}
+
+// tipai
+console.log(multiply('labas', 5));
+console.log(multiply(5, 'labas'));
+console.log(multiply('labas', 'rytas'));
+console.log(multiply(7, false));
+console.log(multiply(true, 5));
+
+// ne skaicius
+console.log(multiply(Infinity, 5));
+console.log(multiply(5, Infinity));
+console.log(multiply(Infinity, Infinity));
+console.log(multiply(-Infinity, 5));
+console.log(multiply(5, -Infinity));
+console.log(multiply(-Infinity, -Infinity));
+
+console.log(multiply(NaN, 5));
+console.log(multiply(5, NaN));
+console.log(multiply(NaN, NaN));
+
+// ne tipai
+console.log(multiply([], 1));
+console.log(multiply([], []));
+console.log(multiply(2, []));
+
+console.log(multiply({}, 1));
+console.log(multiply({}, {}));
+console.log(multiply(2, {}));
+
+console.log(multiply(multiply, 1));
+console.log(multiply(multiply, multiply));
+console.log(multiply(2, multiply));
+
+// ok
+console.log(multiply(7, 5));
+console.log(multiply(-7, 5));
+console.log(multiply(-7, -5));
+console.log(multiply(7, -5));
+
+
 // Funkcija pavadinimu “skaitmenuKiekisSkaiciuje”:
 // priima vieną kintamąjį
 // jei perduotas kintamasis nėra skaičiaus tipo, tai išveda pranešimą “Pateikta netinkamo tipo reikšmė.”
@@ -295,11 +362,12 @@ console.log(multiplication(3,7,5));
 // console.log( skaitmenuKiekisSkaiciuje( NaN ) );
 // rezultatas: “Pateikta netinkamo tipo reikšmė.”
 
+//mano bandymas, nepilnas
 function skaitmenuKiekisSkaiciuje(number) {
     let typeOfNumber = typeof number;
     // console.log(typeOfNumber);
     
-    if (typeOfNumber !== 'number'  ) {
+    if (typeOfNumber !== 'number' ) {
         return "Pateikta netinkamo tipo reikšmė";
     } else {
         let skaitmenuKiekisSkaiciuje = String(number).length;
@@ -317,6 +385,50 @@ console.log(skaitmenuKiekisSkaiciuje(37060123456));
 console.log(skaitmenuKiekisSkaiciuje(true));
 console.log(skaitmenuKiekisSkaiciuje('asd'));
 console.log(skaitmenuKiekisSkaiciuje(NaN));
+
+
+console.log("asdknsk-----------------");
+console.clear();
+
+function numberLength(number) {
+    if (typeof number !== 'number' || !isFinite(number)) {
+        return 'Pateikta netinkamo tipo reikšmė.';
+    }
+
+    const numberAsString = '' + number;
+    let count = numberAsString.length;
+
+    if (number % 1 !== 0) {
+        count--;
+    }
+
+    if (number < 0) {
+        count--;
+    }
+
+    return count;
+}
+
+console.log(numberLength(true));
+console.log(numberLength('asd'));
+console.log(numberLength(NaN));
+console.log(numberLength([]));
+console.log(numberLength({}));
+console.log(numberLength(undefined));
+console.log(numberLength(null));
+console.log(numberLength(numberLength));
+console.log(numberLength(Infinity));
+console.log(numberLength(-Infinity));
+
+console.log(numberLength(5), '->', 1);
+console.log(numberLength(781), '->', 3);
+console.log(numberLength(37060123456), '->', 11);
+console.log(numberLength(3.14), '->', 3);
+
+console.log(numberLength(-5), '->', 1);
+console.log(numberLength(-781), '->', 3);
+console.log(numberLength(-37060123456), '->', 11);
+console.log(numberLength(-3.14), '->', 3);
 
 
 // Funkcija pavadinimu “didziausiasSkaiciusSarase”:
@@ -363,17 +475,9 @@ if (typeOfVariable !== 'object') {
     // for (let i = 0; i < objectLength; i++) {
         let max = Math.max(...number);
         return max;
-
-
         }
 
-
-        
-
     }
-
-
-
 
 
 console.log(didziausiasSkaiciusSarase([1]));
@@ -384,39 +488,54 @@ console.log( didziausiasSkaiciusSarase( [ -1, -2, -3, -4, -5, -6, -7, -8 ] ) );
 console.log( didziausiasSkaiciusSarase( `pomidoras` ) );
 console.log( didziausiasSkaiciusSarase( [] ) );
 
-function skaitmenuKiekisSkaiciuje(number) {
-    let typeOfNumber = typeof number;
-    // console.log(typeOfNumber);
-    
-    if (typeOfNumber !== 'number' || isNaN(number) ) {
-        return "Pateikta netinkamo tipo reikšmė";
-    } 
-    if (number % 1 !== 0) {
-        let skaitmenuKiekisSkaiciuje = String(number).length;
-        return skaitmenuKiekisSkaiciuje.length -1
-    }
-    
-    else {
-        let skaitmenuKiekisSkaiciuje = String(number).length;
-        return skaitmenuKiekisSkaiciuje;
-        
-    }
-    
-    
-}
-console.log("hfkwjs-----------");
 
-console.log(skaitmenuKiekisSkaiciuje(5));
-console.log(skaitmenuKiekisSkaiciuje(781));
-console.log(skaitmenuKiekisSkaiciuje(37060123456));
-console.log(skaitmenuKiekisSkaiciuje(true));
-console.log(skaitmenuKiekisSkaiciuje('asd'));
-console.log(skaitmenuKiekisSkaiciuje(NaN));
-console.log(skaitmenuKiekisSkaiciuje([]));
-console.log(skaitmenuKiekisSkaiciuje({}));
-console.log(skaitmenuKiekisSkaiciuje(undefined));
-console.log(skaitmenuKiekisSkaiciuje(null));
-console.log(skaitmenuKiekisSkaiciuje(Infinity));
-console.log(skaitmenuKiekisSkaiciuje(-Infinity));
-console.log(skaitmenuKiekisSkaiciuje(3.14));
-console.log(skaitmenuKiekisSkaiciuje(-3.14));
+console.clear();
+
+function biggest(list) {
+
+    let typeOfVariable = typeof list;
+ 
+    
+
+if (typeOfVariable !== 'object') {
+    return 'Pateikta netinkamo tipo reikšmė.';
+}
+
+if (list.length === 0) {
+    return "Pateiktas sąrašas negali būti tuščias.";
+}
+    let result = list[0];
+
+    for (let i = 1; i < list.length; i++) {
+        if (list[i] > result) {
+            result = list[i];
+        }
+    }
+
+    return result;
+}
+
+console.log(biggest([1]), '->', 1);
+console.log(biggest([1, 2, 3]), '->', 3);
+console.log(biggest([-5, 78, 14, 0, 18]), '->', 78);
+console.log(biggest([69, 69, 69, 69, 66]), '->', 69);
+console.log(biggest([-1, -2, -3, -4, -5, -6, -7, -8]), '->', -1);
+console.log(biggest('labas'));
+console.log(biggest([]));
+console.log(biggest(NaN));
+console.log(biggest(Infinity));
+console.log(biggest(-Infinity));
+console.log(biggest(true));
+console.log(biggest(undefined));
+// console.log(biggest(null)); //isskirtinis
+console.log(biggest({})); // isskirtinis
+// console.log(biggest(null)); //isskirtinis
+
+
+
+
+
+
+
+
+
