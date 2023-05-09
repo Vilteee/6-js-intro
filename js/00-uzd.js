@@ -295,12 +295,11 @@ console.log(multiplication(3,7,5));
 // console.log( skaitmenuKiekisSkaiciuje( NaN ) );
 // rezultatas: “Pateikta netinkamo tipo reikšmė.”
 
-
 function skaitmenuKiekisSkaiciuje(number) {
     let typeOfNumber = typeof number;
     // console.log(typeOfNumber);
     
-    if (typeOfNumber !== 'number' ) {
+    if (typeOfNumber !== 'number'  ) {
         return "Pateikta netinkamo tipo reikšmė";
     } else {
         let skaitmenuKiekisSkaiciuje = String(number).length;
@@ -343,16 +342,81 @@ console.log(skaitmenuKiekisSkaiciuje(NaN));
 // console.log( didziausiasSkaiciusSarase( [] ) );
 // rezultatas: “Pateiktas sąrašas negali būti tuščias.”
 
-
-const list1 = [1, 3, 4, 7, 8, ];
-const list2 = [10, 17, 38, 35, 95];
-const list3 = [100, 485, 223, 694, 953];
+console.clear();
 
 
-function didziausiasSkaiciusSarase () {
+function didziausiasSkaiciusSarase (number) {
+
+let typeOfVariable = typeof number;
+console.log(typeOfVariable);
+
+
+if (typeOfVariable !== 'object') {
+    return 'Pateikta netinkamo tipo reikšmė.';
+
+}  else if (number.length === 0) {
+    return "Pateiktas sąrašas negali būti tuščias.";
+
+} else {
+    console.clear();
+    // let objectLength = number.length;
+    // for (let i = 0; i < objectLength; i++) {
+        let max = Math.max(...number);
+        return max;
+
+
+        }
+
+
+        
+
+    }
 
 
 
+
+
+console.log(didziausiasSkaiciusSarase([1]));
+console.log( didziausiasSkaiciusSarase( [ 1, 2, 3 ] ) );
+console.log( didziausiasSkaiciusSarase( [ -5, 78, 14, 0, 18 ] ) );
+console.log( didziausiasSkaiciusSarase( [ 69, 69, 69, 69, 66 ] ) );
+console.log( didziausiasSkaiciusSarase( [ -1, -2, -3, -4, -5, -6, -7, -8 ] ) );
+console.log( didziausiasSkaiciusSarase( `pomidoras` ) );
+console.log( didziausiasSkaiciusSarase( [] ) );
+
+function skaitmenuKiekisSkaiciuje(number) {
+    let typeOfNumber = typeof number;
+    // console.log(typeOfNumber);
+    
+    if (typeOfNumber !== 'number' || isNaN(number) ) {
+        return "Pateikta netinkamo tipo reikšmė";
+    } 
+    if (number % 1 !== 0) {
+        let skaitmenuKiekisSkaiciuje = String(number).length;
+        return skaitmenuKiekisSkaiciuje.length -1
+    }
+    
+    else {
+        let skaitmenuKiekisSkaiciuje = String(number).length;
+        return skaitmenuKiekisSkaiciuje;
+        
+    }
+    
+    
 }
+console.log("hfkwjs-----------");
 
-console.log(didziausiasSkaiciusSarase[1]);
+console.log(skaitmenuKiekisSkaiciuje(5));
+console.log(skaitmenuKiekisSkaiciuje(781));
+console.log(skaitmenuKiekisSkaiciuje(37060123456));
+console.log(skaitmenuKiekisSkaiciuje(true));
+console.log(skaitmenuKiekisSkaiciuje('asd'));
+console.log(skaitmenuKiekisSkaiciuje(NaN));
+console.log(skaitmenuKiekisSkaiciuje([]));
+console.log(skaitmenuKiekisSkaiciuje({}));
+console.log(skaitmenuKiekisSkaiciuje(undefined));
+console.log(skaitmenuKiekisSkaiciuje(null));
+console.log(skaitmenuKiekisSkaiciuje(Infinity));
+console.log(skaitmenuKiekisSkaiciuje(-Infinity));
+console.log(skaitmenuKiekisSkaiciuje(3.14));
+console.log(skaitmenuKiekisSkaiciuje(-3.14));
