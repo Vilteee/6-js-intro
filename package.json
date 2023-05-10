@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "arrow":"nodemon ./js/13-arrow.js",
     "for":"nodemon ./js/12-for.js",
     "boolean":"nodemon ./js/06-boolean.js",
     "ternary":"nodemon ./js/11-ternary.js",
