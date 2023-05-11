@@ -113,3 +113,6 @@ console.log(`7 < 5 = ${calc(7, '<', 5)}`);
 // aboutStr('labas', 'uppercase')
 // aboutStr('labas', 'uppercaseCount')
 // aboutStr('labas', 'lowercaseCount')
+
+
+
